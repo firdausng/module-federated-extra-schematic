@@ -8,7 +8,8 @@
     },
     "ng-update-webpack": {
       "description": "A blank schematic.",
-      "factory": "./ng-update-webpack/index#ngUpdateWebpack"
+      "factory": "./ng-update-webpack/index#ngUpdateWebpack",
+      "schema": "./ng-update-webpack/schema.json"
     }
   }
 }

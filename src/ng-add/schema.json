@@ -15,7 +15,21 @@
       "type": "string",
       "description": "specifies the type of the mfe project",
       "default": "remote"
+    },
+    "path": {
+      "type": "string",
+      "description": "specifies the path to create the order wizard under",
+      "default": ""
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the component"
+    },
+    "spec": {
+      "type": "boolean",
+      "description": "specifies if a spec file is generated",
+      "default": true
     }
   },
-  "required": ["project", "port"]
+  "required": ["name", "project", "port"]
 }
