@@ -1,0 +1,21 @@
+{
+  "$id": "ngUpdateWebpackConfig",
+  "title": "Schematic to update webpack config to match mfe configuration",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "specifies the project to run the schematic in"
+    },
+    "port": {
+      "type": "number",
+      "description": "specifies the port of the mfe project"
+    },
+    "type": {
+      "type": "string",
+      "description": "specifies the type of the mfe project",
+      "default": "remote"
+    }
+  },
+  "required": ["project", "port"]
+}
