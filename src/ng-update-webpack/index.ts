@@ -137,30 +137,6 @@ function setRemoteWebpackConfig(fileContent: string): string{
 
 function setHostWebpackConfig(fileContent: string): string{
   let newContent =  fileContent.replace(/remotes\s*:\s*\{(?:[^{}]|\{[^{}]*\})*\}/, 'remotes: {}');
-  newContent =  newContent.replace(/shareAll/, 'share');
-  newContent =  newContent.replace(/shared\s*:\s*\{(?:[^{}]|\{[^{}]*\})*\}/,
-      `shared: share({
-     '@angular/core': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/common': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/common/http': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-    '@angular/router': {
-      singleton: true,
-      strictVersion: true,
-      requiredVersion: 'auto',
-    },
-  })`);
   return newContent;
 }
 
@@ -207,7 +183,6 @@ function setCommonWebpackConfig(fileContent: string): string{
   })`);
   return newContent;
 }
-
 
 type Schema = {
   project: string

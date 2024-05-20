@@ -35,7 +35,7 @@ export function add(_options: Schema): Rule {
         const workspace = getWorkspace(_options, tree);
         // @ts-ignore
         const project = workspace.projects[_options.project] as ProjectDefinition;
-        const appRoot = `${project?.root}/${project?.sourceRoot}/${project?.prefix}`;
+        const appRoot = `${project?.sourceRoot}/${project?.prefix}`;
         const folderPath = normalize(strings.dasherize(appRoot + _options.path + '/' + _options.name));
 
         let files = url('./files');

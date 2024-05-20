@@ -1,9 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MyTerminalComponent } from './my-terminal.component';
+import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component';
 
 describe('<%= classify(name) %>Component', () => {
-  let component: MyTerminalComponent;
+  let component: <%= classify(name) %>Component;
   let fixture: ComponentFixture<<%= classify(name) %>Component>;
 
   beforeEach(async () => {
